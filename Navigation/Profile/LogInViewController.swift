@@ -91,17 +91,22 @@ class LogInViewController: UIViewController {
         loginField.backgroundColor = .systemGray6
         loginField.layer.borderWidth = 0.5
         loginField.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 0.5)
-        loginField.placeholder = " Login"
+        loginField.placeholder = "Login"
         loginField.autocapitalizationType = .none
         loginField.textColor = .black
-       
+        loginField.leftViewMode = UITextField.ViewMode.always
+        loginField.leftView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        
+               
         passwordField.backgroundColor = .systemGray6
         passwordField.layer.borderWidth = 0.5
         passwordField.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 0.5)
-        passwordField.placeholder = " Password"
+        passwordField.placeholder = "Password"
         passwordField.autocapitalizationType = .none
         passwordField.textColor = .black
         passwordField.isSecureTextEntry = true
+        passwordField.leftViewMode = UITextField.ViewMode.always
+        passwordField.leftView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         
         NSLayoutConstraint.activate([
             stackForLoginPassword.heightAnchor.constraint(equalToConstant: 100),
